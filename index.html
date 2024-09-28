@@ -5,22 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>DCM Cables and Switchgears</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background: linear-gradient(to right, #e0f7fa, #80deea);
             color: #333;
+            background-attachment: fixed; /* Keeps the background in place when scrolling */
         }
         header {
             background-color: #004aad;
             color: white;
             text-align: center;
             padding: 20px 0;
-        }
-        header h1 {
-            margin: 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
         }
         nav {
             text-align: center;
@@ -31,6 +31,10 @@
             color: white;
             text-decoration: none;
             margin: 0 15px;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #ffeb3b; /* Change color on hover */
         }
         section {
             padding: 20px;
@@ -39,23 +43,50 @@
             background: white;
             border-radius: 5px;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
         }
         h2 {
             color: #004aad;
+        }
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .image-item {
+            text-align: center;
         }
         .product-image {
             max-width: 100%;
             height: auto;
             margin: 20px 0;
+            transition: transform 0.2s, box-shadow 0.2s;
+            border-radius: 5px; /* Rounded corners for images */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+        }
+        .product-image:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Darker shadow on hover */
         }
         footer {
             text-align: center;
-            padding: 10px 0;
+            padding: 20px 0;
             background-color: #00338d;
             color: white;
             position: relative;
             bottom: 0;
             width: 100%;
+            box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        @media (max-width: 600px) {
+            nav a {
+                display: block;
+                margin: 10px 0;
+            }
+            section {
+                padding: 10px;
+            }
         }
     </style>
 </head>
@@ -73,37 +104,55 @@
 
 <section id="about">
     <h2>About Us</h2>
-    <p>Manufacturers and traders in all kinds of electrical wires, goods, accessories, switchgears, and distribution boxes.</p>
+    <p>Welcome to DCM Cables and Switchgears, a leading manufacturer and trader specializing in high-quality electrical products. With a commitment to excellence, we have been serving our customers with a comprehensive range of electrical wires, goods, accessories, switchgears, and distribution boxes.</p>
+    
+    <p>Founded with a vision to deliver reliable and innovative solutions, our mission is to provide our clients with the best electrical products that meet their diverse needs. We pride ourselves on our dedication to quality, ensuring that every product we offer meets rigorous industry standards.</p>
+    
+    <p>Our values are rooted in integrity, customer satisfaction, and continuous improvement. We strive to foster long-term relationships with our customers by understanding their requirements and providing exceptional service. Our team of experienced professionals is always ready to assist you in finding the right solutions for your electrical needs.</p>
+
+    <p>Thank you for choosing DCM Cables and Switchgears. We look forward to being your trusted partner in the electrical industry!</p>
 </section>
 
 <section id="catalog">
     <h2>Product Catalog</h2>
+    <div class="image-grid">
+        <div class="image-item">
+            <h3>MCB Distribution Box</h3>
+            <img src="https://github.com/MonikaVikas/dcm-cables-and-switchgears/blob/main/Screenshot%202024-09-28%20205602.png?raw=true" alt="MCB Distribution Box" class="product-image">
+        </div>
 
-    <h3>MCB Distribution Box</h3>
-    <img src="https://github.com/MonikaVikas/dcm-cables-and-switchgears/blob/main/Screenshot%202024-09-28%20205602.png?raw=true" alt="Ossum series" class="product-image">
+        <div class="image-item">
+            <h3>32 Amp DP Reverse Change Over Switch</h3>
+            <img src="https://github.com/MonikaVikas/dcm-cables-and-switchgears/blob/main/Screenshot%202024-09-28%20205900.png?raw=true" alt="32 Amp DP Reverse Change Over Switch With Copper Parts" class="product-image">
+            <p><strong>Description:</strong> Complete range from 16amp to 100amp</p>
+        </div>
 
-    <h3>32 Amp DP Reverse Change Over Switch</h3>
-    <img src="https://github.com/MonikaVikas/dcm-cables-and-switchgears/blob/main/Screenshot%202024-09-28%20205900.png?raw=true" alt="32 Amp DP Reverse Change Over Switch
-With Copper Parts" class="product-image">
-    <p><strong>Description:</strong> Complete range from 16amp to 100amp</p>
+        <div class="image-item">
+            <h3>MCB Distribution Box</h3>
+            <img src="https://github.com/MonikaVikas/dcm-cables-and-switchgears/blob/main/Screenshot%202024-09-28%20205752.png?raw=true" alt="MCB Distribution Box Royal Series" class="product-image">
+            <p><strong>Description:</strong> Full sheet metal design</p>
+        </div>
 
-    <h3>MCB Distribution Box</h3>
-    <img src="https://github.com/MonikaVikas/dcm-cables-and-switchgears/blob/main/Screenshot%202024-09-28%20205752.png?raw=true" alt="MCB Distribution Box
-Royal Series" class="product-image">
-    <p><strong>Description:</strong> Full sheet metal design</p>
+        <div class="image-item">
+            <h3>Double Door MCB Distribution Box</h3>
+            <img src="https://github.com/MonikaVikas/dcm-cables-and-switchgears/blob/main/Screenshot%202024-09-28%20205812.png?raw=true" alt="Double Door MCB Distribution Box Full Sheet Metal" class="product-image">
+        </div>
 
-    <h3>Double Door MCB Distribution box</h3>
-    <img src="https://github.com/MonikaVikas/dcm-cables-and-switchgears/blob/main/Screenshot%202024-09-28%20205812.png?raw=true" alt="Double Door MCB Distribution box
-Full sheet metal" class="product-image">
+        <div class="image-item">
+            <h3>Multi Purpose Copper Flexible Wire</h3>
+            <img src="https://github.com/MonikaVikas/dcm-cables-and-switchgears/blob/main/Screenshot%202024-09-28%20205827.png?raw=true" alt="0.5 sqmm to 1.5 sqmm (90 MTR)" class="product-image">
+        </div>
 
-    <h3>Multi purposes copper flexible wire</h3>
-    <img src="https://github.com/MonikaVikas/dcm-cables-and-switchgears/blob/main/Screenshot%202024-09-28%20205827.png?raw=true" alt="0.5 sqmm to 1.5 sqmm ( 90 MTR )" class="product-image">
+        <div class="image-item">
+            <h3>Bus Bar 32Amp to 200Amp</h3>
+            <img src="https://github.com/MonikaVikas/dcm-cables-and-switchgears/blob/main/Screenshot%202024-09-28%20205842.png?raw=true" alt="With Heavy Copper Bar" class="product-image">
+        </div>
 
-    <h3>Bus Bar 32Amp to 200 Amp</h3>
-    <img src="https://github.com/MonikaVikas/dcm-cables-and-switchgears/blob/main/Screenshot%202024-09-28%20205842.png?raw=true" alt="With heavy copper bar" class="product-image">
-
-    <h3>SWITCH FUSE UNIT</h3>
-    <img src="https://github.com/MonikaVikas/dcm-cables-and-switchgears/blob/main/Screenshot%202024-09-28%20205919.png?raw=true" alt="Complete range from 16amp to 100amp" class="product-image">
+        <div class="image-item">
+            <h3>Switch Fuse Unit</h3>
+            <img src="https://github.com/MonikaVikas/dcm-cables-and-switchgears/blob/main/Screenshot%202024-09-28%20205919.png?raw=true" alt="Complete Range from 16amp to 100amp" class="product-image">
+        </div>
+    </div>
 </section>
 
 <section id="contact">
